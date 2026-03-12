@@ -1,13 +1,82 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from "react-router-dom";
+import Layout from "@/components/Layout";
+import { Button } from "@/components/ui/button";
+import { ShieldCheck, Percent, Banknote, Award } from "lucide-react";
+
+const benefits = [
+  {
+    icon: ShieldCheck,
+    title: "Проверенные мастера",
+    desc: "Мы лично отбираем каждого специалиста и проверяем качество работы",
+  },
+  {
+    icon: Percent,
+    title: "Скидка до 15–20%",
+    desc: "Мы договариваемся о лучших ценах — вы экономите на каждом вызове",
+  },
+  {
+    icon: Banknote,
+    title: "Без предоплаты",
+    desc: "Вы платите только после выполнения работы. Никаких авансов",
+  },
+  {
+    icon: Award,
+    title: "Гарантия качества",
+    desc: "Если что-то не так — мы решим вопрос. Ваше спокойствие — наш приоритет",
+  },
+];
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout>
+      {/* Hero */}
+      <section className="bg-background py-16 md:py-24">
+        <div className="container text-center">
+          <h1 className="text-heading-lg md:text-heading-xl font-extrabold mb-6">
+            Надёжные мастера<br />за приятную цену
+          </h1>
+          <p className="text-body-lg text-muted-foreground max-w-3xl mx-auto mb-10">
+            Мы лично проверяем мастеров и договариваемся о скидках для вас.
+            Вы платите меньше — мы получаем честную комиссию.
+          </p>
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/request" aria-label="Перейти к форме заявки">
+              Оставить заявку
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="bg-card py-16">
+        <div className="container">
+          <h2 className="text-heading-md font-bold text-center mb-12">Почему выбирают нас</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {benefits.map((b) => (
+              <div
+                key={b.title}
+                className="bg-background border-2 border-border rounded-lg p-8 text-center"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-5">
+                  <b.icon size={32} className="text-primary" strokeWidth={2.5} />
+                </div>
+                <h3 className="text-heading-sm font-bold mb-3">{b.title}</h3>
+                <p className="text-body text-muted-foreground">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="py-12">
+        <div className="container flex flex-col sm:flex-row items-center justify-center gap-8 text-body-lg font-semibold text-muted-foreground">
+          <span>✅ 100+ проверенных мастеров</span>
+          <span>📅 Работаем с 2026 года</span>
+          <span>⭐ Гарантия качества</span>
+        </div>
+      </section>
+    </Layout>
   );
 };
 
