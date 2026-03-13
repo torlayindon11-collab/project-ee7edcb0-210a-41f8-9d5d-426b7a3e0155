@@ -13,16 +13,20 @@ const serviceOptions = [
   "Другое",
 ];
 
+const cityOptions = ["Москва", "Краснодар"];
+
 const Request = () => {
   const [searchParams] = useSearchParams();
   const prefilledMaster = searchParams.get("master") || "";
   const prefilledService = searchParams.get("service") || "";
+  const prefilledCity = searchParams.get("city") || "";
 
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    city: "",
+    city: prefilledCity,
+    address: "",
     service: prefilledService,
     description: "",
     when: "",
@@ -34,14 +38,12 @@ const Request = () => {
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // Simple phone formatting
     let value = e.target.value.replace(/[^\d+\-() ]/g, "");
     setForm({ ...form, phone: value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Will be replaced with Supabase insert
     console.log("Request submitted:", form);
     setSubmitted(true);
   };
@@ -104,15 +106,32 @@ const Request = () => {
 
             {/* Город */}
             <div>
-              <label htmlFor="city" className="block text-body font-semibold mb-2">Город / район</label>
-              <input
+              <label htmlFor="city" className="block text-body font-semibold mb-2">Город</label>
+              <select
                 id="city"
                 name="city"
-                type="text"
                 value={form.city}
                 onChange={handleChange}
                 className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
-                placeholder="Например, Москва, Южное Бутово"
+              >
+                <option value="">Выберите город</option>
+                {cityOptions.map((c) => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Адрес */}
+            <div>
+              <label htmlFor="address" className="block text-body font-semibold mb-2">Адрес</label>
+              <input
+                id="address"
+                name="address"
+                type="text"
+                value={form.address}
+                onChange={handleChange}
+                className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
+                placeholder="Улица, дом, квартира"
               />
             </div>
 

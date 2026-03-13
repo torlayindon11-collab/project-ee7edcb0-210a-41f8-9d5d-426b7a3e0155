@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <p className="text-heading-sm font-bold text-primary">🛠 Ваши ручки</p>
+            <p className="text-heading-sm font-bold text-primary">🛠 ВАШИ РУЧКИ</p>
             <p className="text-body text-muted-foreground mt-1">Надёжные мастера за приятную цену</p>
           </div>
 
@@ -23,9 +23,8 @@ const Footer = () => {
           <div className="flex items-center gap-6 text-muted-foreground">
             <span>100+ проверенных мастеров</span>
             <span>•</span>
-            <span>Работаем с 2026 года</span>
+            <span>Более 1000 довольных клиентов</span>
           </div>
-          <p className="text-muted-foreground">© 2026 Ваши ручки</p>
         </div>
       </div>
     </footer>

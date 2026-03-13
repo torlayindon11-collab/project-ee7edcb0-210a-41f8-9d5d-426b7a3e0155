@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,11 @@ const benefits = [
   },
 ];
 
+const cities = ["Москва", "Краснодар"];
+
 const Index = () => {
+  const [selectedCity, setSelectedCity] = useState("");
+
   return (
     <Layout>
       {/* Hero */}
@@ -39,8 +44,26 @@ const Index = () => {
             Мы лично проверяем мастеров и договариваемся о скидках для вас.
             Вы платите меньше — мы получаем честную комиссию.
           </p>
+
+          {/* City selection */}
+          <div className="max-w-md mx-auto mb-10">
+            <label htmlFor="city-select" className="block text-body font-semibold mb-3">Выберите ваш город</label>
+            <select
+              id="city-select"
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.target.value)}
+              className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
+              aria-label="Выбор города"
+            >
+              <option value="">Все города</option>
+              {cities.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+          </div>
+
           <Button variant="hero" size="lg" asChild>
-            <Link to="/request" aria-label="Перейти к форме заявки">
+            <Link to={`/request${selectedCity ? `?city=${encodeURIComponent(selectedCity)}` : ''}`} aria-label="Перейти к форме заявки">
               Оставить заявку
             </Link>
           </Button>
@@ -72,7 +95,7 @@ const Index = () => {
       <section className="py-12">
         <div className="container flex flex-col sm:flex-row items-center justify-center gap-8 text-body-lg font-semibold text-muted-foreground">
           <span>✅ 100+ проверенных мастеров</span>
-          <span>📅 Работаем с 2026 года</span>
+          <span>📅 Более 1000 довольных клиентов</span>
           <span>⭐ Гарантия качества</span>
         </div>
       </section>
