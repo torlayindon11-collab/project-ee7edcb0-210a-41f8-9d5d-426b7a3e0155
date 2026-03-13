@@ -91,14 +91,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trust bar */}
-      <section className="py-12">
-        <div className="container flex flex-col sm:flex-row items-center justify-center gap-8 text-body-lg font-semibold text-muted-foreground">
-          <span>✅ 100+ проверенных мастеров</span>
-          <span>📅 Более 1000 довольных клиентов</span>
-          <span>⭐ Гарантия качества</span>
-        </div>
-      </section>
     </Layout>
   );
 };
