@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Masters from "./pages/Masters";
+
 import HowItWorks from "./pages/HowItWorks";
 import Request from "./pages/Request";
 import NotFound from "./pages/NotFound";
