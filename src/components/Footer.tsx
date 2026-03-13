@@ -19,13 +19,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between mt-10 pt-6 border-t border-border gap-4">
-          <div className="flex items-center gap-6 text-muted-foreground">
-            <span>100+ проверенных мастеров</span>
-            <span>•</span>
-            <span>Более 1000 довольных клиентов</span>
-          </div>
-        </div>
       </div>
     </footer>
   );
