@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Главная", path: "/" },
   { label: "Услуги", path: "/services" },
-  { label: "Мастера", path: "/masters" },
   { label: "Как это работает", path: "/how-it-works" },
   { label: "Оставить заявку", path: "/request" },
 ];
@@ -18,7 +17,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background border-b-2 border-border">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="text-heading-sm font-extrabold text-primary" aria-label="Ваши ручки — главная">
-          🛠 Ваши ручки
+          🛠 ВАШИ РУЧКИ
         </Link>
 
         {/* Desktop nav */}
