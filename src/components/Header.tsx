@@ -17,8 +17,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background border-b-2 border-border">
       <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="text-heading-sm font-extrabold text-primary" aria-label="Ваши ручки — главная">
-          🛠 ВАШИ РУЧКИ
+        <Link to="/" className="flex items-center gap-2" aria-label="Ваши ручки — главная">
+          <img src={logo} alt="ВАШИ РУЧКИ" className="h-10 w-10 rounded-full object-cover" />
+          <span className="text-heading-sm font-extrabold text-primary">ВАШИ РУЧКИ</span>
         </Link>
 
         {/* Desktop nav */}
