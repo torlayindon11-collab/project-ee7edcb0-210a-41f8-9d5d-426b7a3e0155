@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container py-12">
         <div className="flex flex-col items-center gap-4 w-full">
           <div className="flex items-center gap-3 justify-center">
-            <img src={logo} alt="ВАШИ РУЧКИ" className="h-20 w-20 rounded-full object-cover" />
+            <img src={logo} alt="ВАШИ РУЧКИ" className="h-20 w-20 object-contain" />
             <p className="text-heading-md font-bold text-primary">ВАШИ РУЧКИ</p>
           </div>
 
