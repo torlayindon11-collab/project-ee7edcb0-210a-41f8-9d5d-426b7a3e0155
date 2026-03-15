@@ -21,7 +21,7 @@ const Services = () => {
         <div className="container">
           <h1 className="text-heading-lg font-extrabold text-center mb-4">Наши услуги</h1>
           <p className="text-body-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            Проверенные мастера по всем видам домашних работ
+            Проверенные мастера по всем видам работ
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">

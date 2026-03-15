@@ -16,7 +16,7 @@ const Footer = () => {
               <Phone size={24} className="text-primary" />
               <a href="tel:+79991116156" className="hover:text-primary">+7 (999) 111-61-56</a>
             </div>
-            <a href="https://wa.me/79991116156" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">WhatsApp: +7 (999) 111-61-56</a>
+            
           </div>
         </div>
 
