@@ -42,7 +42,6 @@ const Index = () => {
           </h1>
           <p className="text-body-lg text-muted-foreground max-w-3xl mx-auto mb-10">
             Мы лично проверяем мастеров и договариваемся о скидках для вас.
-            Вы платите меньше — мы получаем честную комиссию.
           </p>
 
           {/* City selection */}

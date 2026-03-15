@@ -39,9 +39,28 @@ const Request = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const formatPhone = (digits: string) => {
+    // digits = only numeric chars after "7"
+    let result = "+7";
+    if (digits.length > 0) result += " (" + digits.substring(0, 3);
+    if (digits.length >= 3) result += ") " + digits.substring(3, 6);
+    if (digits.length >= 6) result += "-" + digits.substring(6, 8);
+    if (digits.length >= 8) result += "-" + digits.substring(8, 10);
+    return result;
+  };
+
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value.replace(/[^\d+\-() ]/g, "");
-    setForm({ ...form, phone: value });
+    const raw = e.target.value.replace(/\D/g, "");
+    // Remove leading 7 or 8 if present
+    const digits = raw.startsWith("7") ? raw.slice(1) : raw.startsWith("8") ? raw.slice(1) : raw;
+    const trimmed = digits.slice(0, 10);
+    setForm({ ...form, phone: formatPhone(trimmed) });
+  };
+
+  const handlePhoneFocus = () => {
+    if (!form.phone) {
+      setForm({ ...form, phone: "+7" });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
