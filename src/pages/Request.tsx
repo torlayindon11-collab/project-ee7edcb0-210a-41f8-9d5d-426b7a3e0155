@@ -180,7 +180,7 @@ const Request = () => {
 
             {/* Описание */}
             <div>
-              <label htmlFor="description" className="block text-body font-semibold mb-2">Описание проблемы</label>
+              <label htmlFor="description" className="block text-body font-semibold mb-2">Описание проблемы <span className="text-primary">*</span></label>
               <textarea
                 id="description"
                 name="description"
