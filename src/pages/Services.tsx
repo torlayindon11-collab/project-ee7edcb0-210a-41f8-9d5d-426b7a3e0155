@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Wrench, Zap, Truck, Hammer, Flame, Sparkles, Monitor, MoreHorizontal } from "lucide-react";
+import { Wrench, Zap, Truck, Hammer, Flame, Sparkles, Monitor, Car, MoreHorizontal } from "lucide-react";
 
 const services = [
   { icon: Wrench, title: "Сантехника", desc: "Установка, ремонт и замена сантехники. Устранение протечек, монтаж труб." },
@@ -11,6 +11,7 @@ const services = [
   { icon: Flame, title: "Сварка", desc: "Сварочные работы любой сложности. Ворота, решётки, трубы." },
   { icon: Sparkles, title: "Клининг", desc: "Уборка квартир, домов и офисов. Генеральная и поддерживающая уборка." },
   { icon: Monitor, title: "Компьютерный мастер", desc: "Настройка, ремонт компьютеров и ноутбуков. Установка программ." },
+  { icon: Car, title: "Выездной детейлинг", desc: "Профессиональная полировка, химчистка салона, нанесение защитных покрытий с выездом." },
   { icon: MoreHorizontal, title: "Другие услуги", desc: "Не нашли нужную услугу? Оставьте заявку — мы найдём мастера." },
 ];
 

@@ -12,6 +12,7 @@ const serviceOptions = [
   "Сварка",
   "Клининг",
   "Компьютерный мастер",
+  "Выездной детейлинг",
   "Другое",
 ];
 
@@ -97,7 +98,7 @@ const Request = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Имя */}
             <div>
-              <label htmlFor="name" className="block text-body font-semibold mb-2">Ваше имя</label>
+              <label htmlFor="name" className="block text-body font-semibold mb-2">Ваше имя <span className="text-primary">*</span></label>
               <input
                 id="name"
                 name="name"
@@ -128,10 +129,11 @@ const Request = () => {
 
             {/* Город */}
             <div>
-              <label htmlFor="city" className="block text-body font-semibold mb-2">Город</label>
+              <label htmlFor="city" className="block text-body font-semibold mb-2">Город <span className="text-primary">*</span></label>
               <select
                 id="city"
                 name="city"
+                required
                 value={form.city}
                 onChange={handleChange}
                 className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
@@ -145,11 +147,12 @@ const Request = () => {
 
             {/* Адрес */}
             <div>
-              <label htmlFor="address" className="block text-body font-semibold mb-2">Адрес</label>
+              <label htmlFor="address" className="block text-body font-semibold mb-2">Адрес <span className="text-primary">*</span></label>
               <input
                 id="address"
                 name="address"
                 type="text"
+                required
                 value={form.address}
                 onChange={handleChange}
                 className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
@@ -159,10 +162,11 @@ const Request = () => {
 
             {/* Услуга */}
             <div>
-              <label htmlFor="service" className="block text-body font-semibold mb-2">Категория услуги</label>
+              <label htmlFor="service" className="block text-body font-semibold mb-2">Категория услуги <span className="text-primary">*</span></label>
               <select
                 id="service"
                 name="service"
+                required
                 value={form.service}
                 onChange={handleChange}
                 className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
@@ -176,11 +180,12 @@ const Request = () => {
 
             {/* Описание */}
             <div>
-              <label htmlFor="description" className="block text-body font-semibold mb-2">Описание проблемы</label>
+              <label htmlFor="description" className="block text-body font-semibold mb-2">Описание проблемы <span className="text-primary">*</span></label>
               <textarea
                 id="description"
                 name="description"
                 rows={5}
+                required
                 value={form.description}
                 onChange={handleChange}
                 className="w-full border-2 border-input rounded-lg p-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring resize-y"
@@ -190,11 +195,12 @@ const Request = () => {
 
             {/* Когда */}
             <div>
-              <label htmlFor="when" className="block text-body font-semibold mb-2">Когда нужно</label>
+              <label htmlFor="when" className="block text-body font-semibold mb-2">Когда нужно <span className="text-primary">*</span></label>
               <input
                 id="when"
                 name="when"
                 type="text"
+                required
                 value={form.when}
                 onChange={handleChange}
                 className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
