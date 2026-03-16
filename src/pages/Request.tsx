@@ -195,7 +195,7 @@ const Request = () => {
 
             {/* Когда */}
             <div>
-              <label htmlFor="when" className="block text-body font-semibold mb-2">Когда нужно</label>
+              <label htmlFor="when" className="block text-body font-semibold mb-2">Когда нужно <span className="text-primary">*</span></label>
               <input
                 id="when"
                 name="when"
