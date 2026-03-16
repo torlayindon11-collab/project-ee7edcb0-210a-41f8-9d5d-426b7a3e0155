@@ -147,7 +147,7 @@ const Request = () => {
 
             {/* Адрес */}
             <div>
-              <label htmlFor="address" className="block text-body font-semibold mb-2">Адрес</label>
+              <label htmlFor="address" className="block text-body font-semibold mb-2">Адрес <span className="text-primary">*</span></label>
               <input
                 id="address"
                 name="address"
