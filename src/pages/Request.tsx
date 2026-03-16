@@ -185,6 +185,7 @@ const Request = () => {
                 id="description"
                 name="description"
                 rows={5}
+                required
                 value={form.description}
                 onChange={handleChange}
                 className="w-full border-2 border-input rounded-lg p-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring resize-y"
