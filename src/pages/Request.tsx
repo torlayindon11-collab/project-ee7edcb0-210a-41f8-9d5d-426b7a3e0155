@@ -166,6 +166,7 @@ const Request = () => {
               <select
                 id="service"
                 name="service"
+                required
                 value={form.service}
                 onChange={handleChange}
                 className="w-full min-h-btn border-2 border-input rounded-lg px-4 text-body bg-background focus:outline-none focus:ring-4 focus:ring-ring"
