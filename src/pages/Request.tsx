@@ -97,7 +97,7 @@ const Request = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Имя */}
             <div>
-              <label htmlFor="name" className="block text-body font-semibold mb-2">Ваше имя</label>
+              <label htmlFor="name" className="block text-body font-semibold mb-2">Ваше имя <span className="text-primary">*</span></label>
               <input
                 id="name"
                 name="name"
