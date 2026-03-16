@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-footer.jpg";
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              ВКонтакте: https://vk.com/vashiruchkii
+              ВКонтакте: vk.com/vashiruchkii
             </a>
             <div className="flex items-center gap-2">
               <Phone size={24} className="text-primary" />
