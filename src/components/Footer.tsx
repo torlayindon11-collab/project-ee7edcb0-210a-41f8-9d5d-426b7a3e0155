@@ -11,14 +11,14 @@ const Footer = () => {
             <p className="text-heading-md font-bold text-primary">ВАШИ РУЧКИ</p>
           </div>
 
-          <div className="flex items-center justify-center gap-6 flex-wrap text-body-lg font-semibold">
+          <div className="flex items-center justify-between w-full flex-wrap text-body-lg font-semibold">
             <a
               href="https://vk.com/vashiruchkii"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              VK
+              ВКонтакте: https://vk.com/vashiruchkii
             </a>
             <div className="flex items-center gap-2">
               <Phone size={24} className="text-primary" />
@@ -30,7 +30,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              TG
+              Telegram: @vashiruchki
             </a>
           </div>
         </div>
