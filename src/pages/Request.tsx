@@ -162,7 +162,7 @@ const Request = () => {
 
             {/* Услуга */}
             <div>
-              <label htmlFor="service" className="block text-body font-semibold mb-2">Категория услуги</label>
+              <label htmlFor="service" className="block text-body font-semibold mb-2">Категория услуги <span className="text-primary">*</span></label>
               <select
                 id="service"
                 name="service"
