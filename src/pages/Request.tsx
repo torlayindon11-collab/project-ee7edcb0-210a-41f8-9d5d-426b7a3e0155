@@ -129,7 +129,7 @@ const Request = () => {
 
             {/* Город */}
             <div>
-              <label htmlFor="city" className="block text-body font-semibold mb-2">Город</label>
+              <label htmlFor="city" className="block text-body font-semibold mb-2">Город <span className="text-primary">*</span></label>
               <select
                 id="city"
                 name="city"
