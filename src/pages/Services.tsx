@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Wrench, Zap, Truck, Hammer, Flame, Sparkles, Monitor, Car, MoreHorizontal } from "lucide-react";
+import { Wrench, Zap, Truck, Hammer, Sparkles, Monitor, Car, MoreHorizontal } from "lucide-react";
 
 const services = [
   { icon: Wrench, title: "Сантехника", desc: "Установка, ремонт и замена сантехники. Устранение протечек, монтаж труб." },
