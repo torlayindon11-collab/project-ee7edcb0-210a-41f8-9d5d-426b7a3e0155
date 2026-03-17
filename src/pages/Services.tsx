@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Wrench, Zap, Truck, Hammer, Flame, Sparkles, Monitor, Car, MoreHorizontal } from "lucide-react";
+import { Wrench, Zap, Truck, Hammer, Sparkles, Monitor, Car, MoreHorizontal } from "lucide-react";
 
 const services = [
   { icon: Wrench, title: "Сантехника", desc: "Установка, ремонт и замена сантехники. Устранение протечек, монтаж труб." },
   { icon: Zap, title: "Электрика", desc: "Монтаж проводки, установка розеток и светильников, замена щитков." },
   { icon: Truck, title: "Грузоперевозки", desc: "Переезды, перевозка мебели, погрузка/разгрузка. Аккуратно и быстро." },
   { icon: Hammer, title: "Мелкий ремонт", desc: "Навеска полок, сборка мебели, мелкие бытовые работы по дому." },
-  { icon: Flame, title: "Сварка", desc: "Сварочные работы любой сложности. Ворота, решётки, трубы." },
+  { icon: Sparkles, title: "Выездная химчистка мебели", desc: "Профессиональная химчистка диванов, кресел, матрасов и ковров с выездом на дом." },
   { icon: Sparkles, title: "Клининг", desc: "Уборка квартир, домов и офисов. Генеральная и поддерживающая уборка." },
   { icon: Monitor, title: "Компьютерный мастер", desc: "Настройка, ремонт компьютеров и ноутбуков. Установка программ." },
   { icon: Car, title: "Выездной детейлинг", desc: "Профессиональная полировка, химчистка салона, нанесение защитных покрытий с выездом." },
