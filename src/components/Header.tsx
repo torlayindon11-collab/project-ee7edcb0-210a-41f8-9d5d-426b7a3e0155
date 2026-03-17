@@ -15,7 +15,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b-2 border-border">
+    <header className="relative z-50 bg-background border-b-2 border-border">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-1" aria-label="Ваши ручки — главная">
           <img src={logo} alt="ВАШИ РУЧКИ" className="h-16 w-16 object-contain bg-[#ffffff] rounded" />
