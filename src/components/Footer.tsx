@@ -12,26 +12,14 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center justify-between w-full flex-wrap text-body-lg font-semibold">
-            <a
-              href="https://vk.com/vashiruchkii"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              ВКонтакте: vk.com/vashiruchkii
-            </a>
-            <div className="flex items-center gap-2">
-              <Phone size={24} className="text-primary" />
-              <a href="tel:+79991116156" className="hover:text-primary">+7 (999) 111-61-56</a>
-            </div>
-            <div className="flex flex-col items-end gap-1">
+            <div className="flex flex-col gap-1">
               <a
-                href="https://guns.lol/vashiruchki"
+                href="https://vk.com/vashiruchkii"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-bold hover:opacity-80 transition-opacity"
+                className="hover:text-primary transition-colors"
               >
-                Сотрудничество
+                ВКонтакте: vk.com/vashiruchkii
               </a>
               <a
                 href="https://t.me/vashiruchki"
@@ -40,6 +28,20 @@ const Footer = () => {
                 className="hover:text-primary transition-colors"
               >
                 Telegram: @vashiruchki
+              </a>
+            </div>
+            <div className="flex flex-col items-end gap-1">
+              <div className="flex items-center gap-2">
+                <Phone size={24} className="text-primary" />
+                <a href="tel:+79991116156" className="hover:text-primary">+7 (999) 111-61-56</a>
+              </div>
+              <a
+                href="https://guns.lol/vashiruchki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-bold hover:opacity-80 transition-opacity"
+              >
+                Сотрудничество
               </a>
             </div>
           </div>
