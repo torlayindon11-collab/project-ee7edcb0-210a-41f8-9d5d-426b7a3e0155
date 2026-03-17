@@ -24,14 +24,24 @@ const Footer = () => {
               <Phone size={24} className="text-primary" />
               <a href="tel:+79991116156" className="hover:text-primary">+7 (999) 111-61-56</a>
             </div>
-            <a
-              href="https://t.me/vashiruchki"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              Telegram: @vashiruchki
-            </a>
+            <div className="flex flex-col items-end gap-1">
+              <a
+                href="https://guns.lol/vashiruchki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-bold hover:opacity-80 transition-opacity"
+              >
+                Сотрудничество
+              </a>
+              <a
+                href="https://t.me/vashiruchki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                Telegram: @vashiruchki
+              </a>
+            </div>
           </div>
         </div>
       </div>
