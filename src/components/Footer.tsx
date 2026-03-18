@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import logo from "@/assets/logo-footer.jpg";
+import logo from "@/assets/logo-footer-new.png";
 
 const Footer = () => {
   return (
