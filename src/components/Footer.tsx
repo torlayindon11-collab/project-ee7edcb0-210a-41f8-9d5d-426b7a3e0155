@@ -27,7 +27,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
               >
-                ВКонтакте: vk.com/vashiruchkii
+                ВКонтакте: vashiruchkii
               </a>
             </div>
             <div className="flex flex-col items-center sm:items-end gap-1">
