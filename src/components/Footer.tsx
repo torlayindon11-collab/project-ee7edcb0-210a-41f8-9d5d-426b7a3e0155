@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container py-12">
         <div className="flex flex-col items-center gap-4 w-full">
           <div className="flex items-center gap-3 justify-center">
-            <img src={logo} alt="ВАШИ РУЧКИ" className="h-20 w-20 object-contain bg-[#f5f5f5] rounded" />
+            <img src={logo} alt="ВАШИ РУЧКИ" className="h-20 w-20 object-contain rounded bg-primary-foreground" />
             <p className="text-heading-md font-bold text-primary">ВАШИ РУЧКИ</p>
           </div>
 
@@ -17,16 +17,16 @@ const Footer = () => {
                 href="https://t.me/vashiruchki"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
+                className="hover:text-primary transition-colors">
+                
                 Telegram: @vashiruchki
               </a>
               <a
                 href="https://vk.com/vashiruchkii"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
+                className="hover:text-primary transition-colors">
+                
                 ВКонтакте: vashiruchkii
               </a>
             </div>
@@ -35,8 +35,8 @@ const Footer = () => {
                 href="https://guns.lol/vashiruchki"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-bold hover:opacity-80 transition-opacity"
-              >
+                className="text-primary font-bold hover:opacity-80 transition-opacity">
+                
                 Сотрудничество
               </a>
               <div className="flex items-center gap-2">
@@ -47,8 +47,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
