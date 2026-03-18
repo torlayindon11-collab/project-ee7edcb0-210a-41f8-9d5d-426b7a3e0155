@@ -11,8 +11,8 @@ const Footer = () => {
             <p className="text-heading-md font-bold text-primary">ВАШИ РУЧКИ</p>
           </div>
 
-          <div className="flex items-center justify-between w-full flex-wrap text-body-lg font-semibold">
-            <div className="flex flex-col gap-1 -ml-4">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between w-full flex-wrap text-body-lg font-semibold gap-2 sm:gap-0">
+            <div className="flex flex-col gap-1 sm:-ml-4 items-center sm:items-start">
               <a
                 href="https://t.me/vashiruchki"
                 target="_blank"
@@ -30,7 +30,7 @@ const Footer = () => {
                 ВКонтакте: vk.com/vashiruchkii
               </a>
             </div>
-            <div className="flex flex-col items-end gap-1">
+            <div className="flex flex-col items-center sm:items-end gap-1">
               <a
                 href="https://guns.lol/vashiruchki"
                 target="_blank"
