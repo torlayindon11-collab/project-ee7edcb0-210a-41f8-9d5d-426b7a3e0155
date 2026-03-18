@@ -30,7 +30,7 @@ const Footer = () => {
                 ВКонтакте: vk.com/vashiruchkii
               </a>
             </div>
-            <div className="flex flex-col items-end gap-1">
+            <div className="flex flex-col items-center sm:items-end gap-1">
               <a
                 href="https://guns.lol/vashiruchki"
                 target="_blank"
