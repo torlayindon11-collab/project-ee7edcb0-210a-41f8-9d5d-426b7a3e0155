@@ -26,7 +26,8 @@ const Request = () => {
   const prefilledCity = searchParams.get("city") || "";
 
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
+  const [requestNumber, setRequestNumber] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
     name: "",
     phone: "",
     city: prefilledCity,
