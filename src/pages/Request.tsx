@@ -209,6 +209,22 @@ const Request = () => {
               />
             </div>
 
+            {/* Согласие */}
+            <div className="flex items-center gap-3">
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                required
+                checked={form.consent}
+                onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                className="h-5 w-5 accent-primary cursor-pointer"
+              />
+              <label htmlFor="consent" className="text-body cursor-pointer select-none">
+                Я даю согласие на обработку персональных данных <span className="text-primary">*</span>
+              </label>
+            </div>
+
             {/* Мастер */}
             {form.master && (
               <div>
