@@ -210,7 +210,7 @@ const Request = () => {
             </div>
 
             {/* Согласие */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <input
                 id="consent"
                 name="consent"
@@ -218,10 +218,10 @@ const Request = () => {
                 required
                 checked={form.consent}
                 onChange={(e) => setForm({ ...form, consent: e.target.checked })}
-                className="h-5 w-5 accent-primary cursor-pointer"
+                className="h-5 w-5 accent-primary cursor-pointer flex-shrink-0 mt-0.5"
               />
-              <label htmlFor="consent" className="text-body cursor-pointer select-none">
-                Я даю согласие на обработку персональных данных <span className="text-primary">*</span>
+              <label htmlFor="consent" className="text-body cursor-pointer select-none whitespace-nowrap">
+                Я даю согласие на обработку персональных данных<span className="text-primary ml-1">*</span>
               </label>
             </div>
 
