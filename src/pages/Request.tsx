@@ -28,6 +28,7 @@ const Request = () => {
   const [submitted, setSubmitted] = useState(false);
   const [requestNumber, setRequestNumber] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [form, setForm] = useState({
     name: "",
     phone: "",
     city: prefilledCity,
