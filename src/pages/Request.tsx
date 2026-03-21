@@ -100,9 +100,12 @@ const Request = () => {
         <section className="py-24">
           <div className="container max-w-2xl text-center">
             <CheckCircle size={80} className="text-primary mx-auto mb-6" />
-            <h1 className="text-heading-lg font-extrabold mb-4">Заявка отправлена!</h1>
+            <h1 className="text-heading-lg font-extrabold mb-4">Заявка принята!</h1>
             <p className="text-body-lg text-muted-foreground">
-              Спасибо! Мы свяжемся с вами в течение 30 минут.
+              Номер заявки: <strong>#{requestNumber}</strong>
+            </p>
+            <p className="text-body-lg text-muted-foreground mt-2">
+              Мы свяжемся с вами в течение 30 минут.
             </p>
           </div>
         </section>
