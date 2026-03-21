@@ -220,7 +220,7 @@ const Request = () => {
                 onChange={(e) => setForm({ ...form, consent: e.target.checked })}
                 className="h-5 w-5 accent-primary cursor-pointer flex-shrink-0 mt-0.5"
               />
-              <label htmlFor="consent" className="text-body cursor-pointer select-none whitespace-nowrap">
+              <label htmlFor="consent" className="text-body cursor-pointer select-none whitespace-nowrap md:whitespace-normal">
                 Я даю согласие на обработку персональных данных<span className="text-primary ml-1">*</span>
               </label>
             </div>
