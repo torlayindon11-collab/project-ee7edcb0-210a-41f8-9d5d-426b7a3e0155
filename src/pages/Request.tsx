@@ -34,6 +34,7 @@ const Request = () => {
     description: "",
     when: "",
     master: prefilledMaster,
+    consent: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
