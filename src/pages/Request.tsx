@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const serviceOptions = [
   "Сантехника",
