@@ -68,10 +68,30 @@ const Request = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Request submitted:", form);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('send-telegram', {
+        body: {
+          name: form.name,
+          phone: form.phone,
+          city: form.city,
+          address: form.address,
+          service: form.service,
+          description: form.description,
+          when: form.when,
+        },
+      });
+      if (error) throw error;
+      setRequestNumber(data.requestNumber);
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Error submitting request:', err);
+      alert('Произошла ошибка при отправке заявки. Попробуйте ещё раз.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
