@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const serviceOptions = [
   "Сантехника",
@@ -25,6 +26,8 @@ const Request = () => {
   const prefilledCity = searchParams.get("city") || "";
 
   const [submitted, setSubmitted] = useState(false);
+  const [requestNumber, setRequestNumber] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -65,10 +68,30 @@ const Request = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Request submitted:", form);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('send-telegram', {
+        body: {
+          name: form.name,
+          phone: form.phone,
+          city: form.city,
+          address: form.address,
+          service: form.service,
+          description: form.description,
+          when: form.when,
+        },
+      });
+      if (error) throw error;
+      setRequestNumber(data.requestNumber);
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Error submitting request:', err);
+      alert('Произошла ошибка при отправке заявки. Попробуйте ещё раз.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -77,9 +100,12 @@ const Request = () => {
         <section className="py-24">
           <div className="container max-w-2xl text-center">
             <CheckCircle size={80} className="text-primary mx-auto mb-6" />
-            <h1 className="text-heading-lg font-extrabold mb-4">Заявка отправлена!</h1>
+            <h1 className="text-heading-lg font-extrabold mb-4">Заявка принята!</h1>
             <p className="text-body-lg text-muted-foreground">
-              Спасибо! Мы свяжемся с вами в течение 30 минут.
+              Номер заявки: <strong>#{requestNumber}</strong>
+            </p>
+            <p className="text-body-lg text-muted-foreground mt-2">
+              Мы свяжемся с вами в течение 30 минут.
             </p>
           </div>
         </section>
@@ -241,8 +267,8 @@ const Request = () => {
               </div>
             )}
 
-            <Button type="submit" variant="hero" size="lg" className="w-full" aria-label="Отправить заявку">
-              Отправить заявку
+            <Button type="submit" variant="hero" size="lg" className="w-full" aria-label="Отправить заявку" disabled={isSubmitting}>
+              {isSubmitting ? "Отправка..." : "Отправить заявку"}
             </Button>
           </form>
         </div>
