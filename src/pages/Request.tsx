@@ -267,8 +267,8 @@ const Request = () => {
               </div>
             )}
 
-            <Button type="submit" variant="hero" size="lg" className="w-full" aria-label="Отправить заявку">
-              Отправить заявку
+            <Button type="submit" variant="hero" size="lg" className="w-full" aria-label="Отправить заявку" disabled={isSubmitting}>
+              {isSubmitting ? "Отправка..." : "Отправить заявку"}
             </Button>
           </form>
         </div>
