@@ -78,7 +78,7 @@ const Index = () => {
       <section className="bg-card py-16">
         <div className="container">
           <h2 className="text-heading-md font-bold text-center mb-12">Почему выбирают нас</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
             {benefits.map((b) => (
               <div
                 key={b.title}

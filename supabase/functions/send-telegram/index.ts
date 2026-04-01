@@ -25,13 +25,14 @@ serve(async (req) => {
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     const requestNumber = `ЗАЯВКА-${dateStr}-${randomNum}`;
 
-    // Format date/time for message
-    const dd = String(now.getDate()).padStart(2, '0');
-    const mm = String(now.getMonth() + 1).padStart(2, '0');
-    const yyyy = now.getFullYear();
-    const hh = String(now.getHours()).padStart(2, '0');
-    const min = String(now.getMinutes()).padStart(2, '0');
-    const formattedDateTime = `${dd}.${mm}.${yyyy} ${hh}:${min}`;
+    // Format date/time in Moscow timezone (GMT+3)
+    const moscowDate = new Date(now.getTime() + 3 * 60 * 60 * 1000);
+    const dd = String(moscowDate.getUTCDate()).padStart(2, '0');
+    const mm = String(moscowDate.getUTCMonth() + 1).padStart(2, '0');
+    const yyyy = moscowDate.getUTCFullYear();
+    const hh = String(moscowDate.getUTCHours()).padStart(2, '0');
+    const min = String(moscowDate.getUTCMinutes()).padStart(2, '0');
+    const formattedDateTime = `${dd}.${mm}.${yyyy} ${hh}:${min} (МСК)`;
 
     const message = `🔔 <b>НОВАЯ ЗАЯВКА #${requestNumber}</b>
 
