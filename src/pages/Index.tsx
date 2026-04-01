@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, BadgeRubleSign, Banknote, Award, Heart } from "lucide-react";
+import { ShieldCheck, Tag, Banknote, Award, Heart } from "lucide-react";
 
 const benefits = [
   {
