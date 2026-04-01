@@ -5,8 +5,8 @@ import logo from "@/assets/logo-header.jpg";
 
 const navItems = [
   { label: "Главная", path: "/" },
-  { label: "Услуги", path: "/services" },
   { label: "Как это работает", path: "/how-it-works" },
+  { label: "Услуги", path: "/services" },
   { label: "Оставить заявку", path: "/request" },
 ];
 
