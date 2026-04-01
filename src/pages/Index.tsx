@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Percent, Banknote, Award } from "lucide-react";
+import { ShieldCheck, Tag, Banknote, Award, Heart } from "lucide-react";
 
 const benefits = [
   {
@@ -11,8 +11,8 @@ const benefits = [
     desc: "Мы лично отбираем каждого специалиста и проверяем качество работы",
   },
   {
-    icon: Percent,
-    title: "Скидка до 15–20%",
+    icon: Tag,
+    title: "Лучшие цены",
     desc: "Мы договариваемся о лучших ценах — вы экономите на каждом вызове",
   },
   {
@@ -24,6 +24,11 @@ const benefits = [
     icon: Award,
     title: "Гарантия качества",
     desc: "Если что-то не так — мы решим вопрос. Ваше спокойствие — наш приоритет",
+  },
+  {
+    icon: Heart,
+    title: "Скидки пенсионерам",
+    desc: "Скидка 10% для пенсионеров на все виды услуг. Забота о старшем поколении — наш принцип",
   },
 ];
 
