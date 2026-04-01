@@ -76,19 +76,19 @@ const Index = () => {
 
       {/* Benefits */}
       <section className="bg-card py-16">
-        <div className="container">
+        <div className="container max-w-7xl">
           <h2 className="text-heading-md font-bold text-center mb-12">Почему выбирают нас</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="bg-background border-2 border-border rounded-lg p-8 text-center"
+                className="bg-background border-2 border-border rounded-lg p-5 text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-5">
-                  <b.icon size={32} className="text-primary" strokeWidth={2.5} />
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
+                  <b.icon size={28} className="text-primary" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-heading-sm font-bold mb-3">{b.title}</h3>
-                <p className="text-body text-muted-foreground">{b.desc}</p>
+                <h3 className="text-lg font-bold mb-2">{b.title}</h3>
+                <p className="text-sm text-muted-foreground">{b.desc}</p>
               </div>
             ))}
           </div>
