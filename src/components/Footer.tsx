@@ -11,11 +11,6 @@ const Footer = () => {
             <p className="text-heading-md font-bold text-primary">ВАШИ РУЧКИ</p>
           </div>
 
-          <div className="flex items-center justify-center gap-2">
-            <Clock size={20} className="text-primary" />
-            <span className="text-body text-primary font-semibold">8-22</span>
-          </div>
-
           <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between w-full flex-wrap text-body-lg font-semibold gap-2 sm:gap-0">
             <div className="flex flex-col gap-1 sm:-ml-4 items-center sm:items-start">
               <a
@@ -34,6 +29,12 @@ const Footer = () => {
                 
                 ВКонтакте: vashiruchkii
               </a>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="flex items-center gap-2">
+                <Clock size={20} className="text-primary" />
+                <span className="text-body text-primary font-semibold">8-22</span>
+              </div>
             </div>
             <div className="flex flex-col items-center sm:items-end gap-1">
               <a

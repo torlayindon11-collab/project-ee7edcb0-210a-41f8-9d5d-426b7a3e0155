@@ -248,7 +248,7 @@ const Request = () => {
               />
               <label htmlFor="consent" className="text-body cursor-pointer select-none md:whitespace-nowrap">
                 Я даю согласие на обработку{" "}
-                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">персональных данных</a>
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline decoration-primary hover:text-primary/80">персональных данных</a>
                 <span className="text-primary ml-1">*</span>
               </label>
             </div>
