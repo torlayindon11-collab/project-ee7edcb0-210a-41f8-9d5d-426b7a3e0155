@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import HowItWorks from "./pages/HowItWorks";
 import Request from "./pages/Request";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/request" element={<Request />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

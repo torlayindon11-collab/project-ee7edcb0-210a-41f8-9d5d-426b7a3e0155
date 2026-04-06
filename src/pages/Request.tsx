@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 const serviceOptions = [
@@ -247,7 +247,9 @@ const Request = () => {
                 className="h-5 w-5 accent-primary cursor-pointer flex-shrink-0 mt-0.5"
               />
               <label htmlFor="consent" className="text-body cursor-pointer select-none md:whitespace-nowrap">
-                Я даю согласие на обработку персональных данных<span className="text-primary ml-1">*</span>
+                Я даю согласие на обработку{" "}
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">персональных данных</a>
+                <span className="text-primary ml-1">*</span>
               </label>
             </div>
 
@@ -271,6 +273,11 @@ const Request = () => {
               {isSubmitting ? "Отправка..." : "Отправить заявку"}
             </Button>
           </form>
+
+          <div className="flex items-center justify-center gap-2 mt-10">
+            <Clock size={20} className="text-muted-foreground" />
+            <span className="text-body text-muted-foreground font-semibold">8-22</span>
+          </div>
         </div>
       </section>
     </Layout>
