@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Clock } from "lucide-react";
 import logo from "@/assets/logo-header.jpg";
 
 const navItems = [
@@ -21,6 +21,10 @@ const Header = () => {
           <img src={logo} alt="ВАШИ РУЧКИ" className="h-16 w-16 object-contain bg-[#ffffff] rounded" />
           <span className="text-heading-sm font-extrabold text-primary">ВАШИ РУЧКИ</span>
         </Link>
+        <div className="flex items-center gap-1.5 ml-3">
+          <Clock size={18} className="text-primary" />
+          <span className="text-body font-semibold text-primary">08-22</span>
+        </div>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8" aria-label="Основная навигация">

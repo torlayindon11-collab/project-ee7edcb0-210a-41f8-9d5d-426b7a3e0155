@@ -1,4 +1,4 @@
-import { Phone, Clock } from "lucide-react";
+import { Phone } from "lucide-react";
 import logo from "@/assets/logo-footer-new.png";
 
 const Footer = () => {
@@ -29,12 +29,6 @@ const Footer = () => {
                 
                 ВКонтакте: vashiruchkii
               </a>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <div className="flex items-center gap-2">
-                <Clock size={20} className="text-primary" />
-                <span className="text-body text-primary font-semibold">08-22</span>
-              </div>
             </div>
             <div className="flex flex-col items-center sm:items-end gap-1">
               <a
