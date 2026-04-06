@@ -274,10 +274,6 @@ const Request = () => {
             </Button>
           </form>
 
-          <div className="flex items-center justify-center gap-2 mt-10">
-            <Clock size={20} className="text-muted-foreground" />
-            <span className="text-body text-muted-foreground font-semibold">8-22</span>
-          </div>
         </div>
       </section>
     </Layout>
