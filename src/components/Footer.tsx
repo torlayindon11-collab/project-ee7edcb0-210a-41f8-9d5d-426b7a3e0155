@@ -1,4 +1,4 @@
-import { Phone, Clock } from "lucide-react";
+import { Phone } from "lucide-react";
 import logo from "@/assets/logo-footer-new.png";
 
 const Footer = () => {
