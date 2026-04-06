@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Clock } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 const serviceOptions = [
@@ -274,10 +274,6 @@ const Request = () => {
             </Button>
           </form>
 
-          <div className="flex items-center justify-center gap-2 mt-10">
-            <Clock size={20} className="text-muted-foreground" />
-            <span className="text-body text-muted-foreground font-semibold">8-22</span>
-          </div>
         </div>
       </section>
     </Layout>

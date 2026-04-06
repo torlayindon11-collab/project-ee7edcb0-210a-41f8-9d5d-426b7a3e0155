@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Clock } from "lucide-react";
 import logo from "@/assets/logo-footer-new.png";
 
 const Footer = () => {
@@ -9,6 +9,11 @@ const Footer = () => {
           <div className="flex items-center gap-3 justify-center">
             <img src={logo} alt="ВАШИ РУЧКИ" className="h-20 w-20 object-contain rounded bg-transparent" />
             <p className="text-heading-md font-bold text-primary">ВАШИ РУЧКИ</p>
+          </div>
+
+          <div className="flex items-center justify-center gap-2">
+            <Clock size={20} className="text-primary" />
+            <span className="text-body text-primary font-semibold">8-22</span>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between w-full flex-wrap text-body-lg font-semibold gap-2 sm:gap-0">
