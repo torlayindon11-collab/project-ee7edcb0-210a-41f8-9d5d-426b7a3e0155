@@ -4,7 +4,6 @@ import logo from "@/assets/logo-header.jpg";
 
 const navItems = [
   { label: "Главная", path: "/" },
-  { label: "Как это работает", path: "/how-it-works" },
   { label: "Услуги", path: "/services" },
   { label: "Оставить заявку", path: "/request" },
 ];
@@ -25,7 +24,7 @@ const Header = () => {
           <span className="text-xs lg:text-body font-semibold text-primary whitespace-nowrap">08-22</span>
         </div>
 
-        <nav className="flex items-center gap-2 lg:gap-8 shrink-0" aria-label="Основная навигация">
+        <nav className="flex items-center gap-3 lg:gap-8 shrink-0" aria-label="Основная навигация">
           {navItems.map((item) => (
             <Link
               key={item.path}
