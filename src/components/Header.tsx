@@ -17,16 +17,20 @@ const Header = () => {
   return (
     <header className="relative z-50 bg-background border-b-2 border-border">
       <div className="container flex items-center justify-between py-3 lg:py-4">
-        <div className="flex items-center gap-2 min-w-0">
-          <Link to="/" className="flex items-center gap-1 shrink-0" aria-label="Ваши ручки — главная">
-            <img src={logo} alt="ВАШИ РУЧКИ" className="h-10 w-10 lg:h-16 lg:w-16 object-contain bg-[#ffffff] rounded" />
-            <span className="text-base lg:text-heading-sm font-extrabold text-primary whitespace-nowrap">ВАШИ РУЧКИ</span>
-          </Link>
-          <div className="flex items-center gap-1 ml-1 shrink-0">
-            <Clock size={14} className="text-primary lg:hidden" />
-            <Clock size={18} className="text-primary hidden lg:block" />
-            <span className="text-sm lg:text-body font-semibold text-primary whitespace-nowrap">08-22</span>
-          </div>
+        <Link to="/" className="flex items-center gap-1 shrink-0" aria-label="Ваши ручки — главная">
+          <img src={logo} alt="ВАШИ РУЧКИ" className="h-10 w-10 lg:h-16 lg:w-16 object-contain bg-[#ffffff] rounded" />
+          <span className="text-base lg:text-heading-sm font-extrabold text-primary whitespace-nowrap">ВАШИ РУЧКИ</span>
+        </Link>
+
+        <div className="hidden lg:flex items-center gap-1 shrink-0">
+          <Clock size={18} className="text-primary" />
+          <span className="text-body font-semibold text-primary whitespace-nowrap">08-22</span>
+        </div>
+
+        {/* Mobile: clock next to logo */}
+        <div className="flex lg:hidden items-center gap-1 ml-1 shrink-0">
+          <Clock size={14} className="text-primary" />
+          <span className="text-sm font-semibold text-primary whitespace-nowrap">08-22</span>
         </div>
 
         {/* Desktop nav */}
