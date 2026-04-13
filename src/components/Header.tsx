@@ -5,7 +5,7 @@ import logo from "@/assets/logo-header.jpg";
 const navItems = [
   { label: "Главная", path: "/" },
   { label: "Услуги", path: "/services" },
-  { label: "Оставить заявку", path: "/request" },
+  { label: "Вызвать мастера", path: "/request" },
 ];
 
 const Header = () => {

@@ -95,7 +95,7 @@ const Index = () => {
 
           <Button variant="hero" size="lg" asChild>
             <Link to={`/request${selectedCity ? `?city=${encodeURIComponent(selectedCity)}` : ''}`} aria-label="Перейти к форме заявки">
-              Оставить заявку
+              Вызвать мастера
             </Link>
           </Button>
         </div>
