@@ -117,8 +117,7 @@ const Request = () => {
     <Layout>
       <section className="py-16">
         <div className="container max-w-2xl">
-          <h1 className="text-heading-lg font-extrabold text-center mb-4">Оставить заявку</h1>
-          <p className="text-body-lg text-muted-foreground text-center mb-10">
+          <p className="text-heading-sm font-bold text-foreground text-center mb-10">
             Заполните форму — мы перезвоним и подберём мастера
           </p>
 
@@ -269,8 +268,8 @@ const Request = () => {
               </div>
             )}
 
-            <Button type="submit" variant="hero" size="lg" className="w-full" aria-label="Отправить заявку" disabled={isSubmitting}>
-              {isSubmitting ? "Отправка..." : "Отправить заявку"}
+            <Button type="submit" variant="hero" size="lg" className="w-full" aria-label="Вызвать мастера" disabled={isSubmitting}>
+              {isSubmitting ? "Отправка..." : "Вызвать мастера"}
             </Button>
           </form>
 
